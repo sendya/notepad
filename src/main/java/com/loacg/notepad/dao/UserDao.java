@@ -20,6 +20,7 @@ public interface UserDao {
      */
     public User getUserByLoginNamePsd(Map<String, Object> params);
 
-
+    public User getUserByLoginName(String loginName);
+    public void updatePassword(User user);
 
 }

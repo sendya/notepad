@@ -16,6 +16,7 @@ import java.util.Map;
  * Date: 1/18/2016
  * Author: Sendya <yinliangliang@rd.keytop.com.cn>
  */
+
 @Component("userService")
 @Transactional
 public class UserService {
@@ -39,6 +40,15 @@ public class UserService {
         User nowUser = null;
         nowUser = userDao.getUserByLoginNamePsd(param);
         return nowUser;
+    }
+
+    public User getUserByLoginName(String loginName) {
+
+        return null;
+    }
+
+    public void updatePassword(User user) {
+
     }
 
 }
