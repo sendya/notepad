@@ -18,13 +18,16 @@ import java.util.Map;
  */
 
 @Component("userService")
-@Transactional
 public class UserService {
 
     private static Logger logger = Logger.getLogger(UserService.class);
 
     @Resource(name = "userDao")
     private UserDao userDao;
+
+    public UserService() {
+        System.out.println("user service load...");
+    }
 
     /**
      * 用户密码验证
