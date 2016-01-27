@@ -10,6 +10,7 @@ public class User {
     private Integer uid;
     private String userName;
     private String passWord;
+    private String nickName;
     private String mail;
 
     public Integer getUid() {
@@ -36,6 +37,14 @@ public class User {
         this.passWord = passWord;
     }
 
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
     public String getMail() {
         return mail;
     }
@@ -50,6 +59,7 @@ public class User {
                 "uid=" + uid +
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
+                ", nickName='" + nickName + '\'' +
                 ", mail='" + mail + '\'' +
                 '}';
     }

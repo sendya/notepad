@@ -17,15 +17,15 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * notepad
- *
+ * <p/>
  * User Action
- *
- *  status
- *      -2 : username or password error
- *      -1 : server error
- *      1  : login success
- *      0  : unknown error
- *
+ * <p/>
+ * status
+ * -2 : username or password error
+ * -1 : server error
+ * 1  : login success
+ * 0  : unknown error
+ * <p/>
  * Date: 1/18/2016
  * Author: Sendya <yinliangliang@rd.keytop.com.cn>
  */
@@ -49,7 +49,7 @@ public class UserAction {
 
         User loginUser = new User();
         try {
-            if(!StringUtils.isNullOrEmpty(auth)) {
+            if (!StringUtils.isNullOrEmpty(auth)) {
                 String auths[] = auth.split(" ");
                 if (auths.length == 2) {
                     // Send text exp:  UserName:PassWord

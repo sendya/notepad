@@ -15,12 +15,14 @@ public interface UserDao {
 
     /**
      * 根据用户名密码查询用户信息
+     *
      * @param params
      * @return
      */
     public User getUserByLoginNamePsd(Map<String, Object> params);
 
     public User getUserByLoginName(String loginName);
+
     public void updatePassword(User user);
 
 }

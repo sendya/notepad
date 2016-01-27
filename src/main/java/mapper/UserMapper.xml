@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.loacg.notepad.dao.UserDao">
-	<!-- 获取用户: 输出直接映射到对象 -->
-	<select id="getUserByLoginNamePsd" parameterType="map" resultType="com.loacg.notepad.entity.User">
-		SELECT `uid`, `name`, `password`, `mail`, `url`, `screenName`, `created`, `activated`, `logged`, `group`, `authCode` FROM `users` WHERE 
-		`name`=#{userName} AND
-		`password`=#{passWord}
+    <!-- 获取用户: 输出直接映射到对象 -->
+    <select id="getUserByLoginNamePsd" parameterType="map" resultType="com.loacg.notepad.entity.User">
+		SELECT `uid`, `userName`, `passWord`, `nickName` FROM `users` WHERE
+		`userName`=#{userName} AND
+		`passWord`=#{passWord}
 	</select>
-	
-	<update id="updatePassword" parameterType="com.loacg.notepad.dao.UserDao">
-		UPDATE `users` SET `user_password` = #{userPassWord} WHERE `user_id` = #{userId} ;
+
+    <update id="updatePassword" parameterType="com.loacg.notepad.dao.UserDao">
+		UPDATE `users` SET `passWord` = #{userPassWord} WHERE `uid` = #{uid} ;
 	</update>
-	
-	<select id="getUserByLoginName" parameterType="String" resultType="com.loacg.notepad.entity.User">
-		SELECT `uid`, `name`, `password`, `mail`, `url`, `screenName`, `created`, `activated`, `logged`, `group`, `authCode` FROM `users` WHERE name=#{userName} 
+
+    <select id="getUserByLoginName" parameterType="String" resultType="com.loacg.notepad.entity.User">
+		SELECT `uid`, `userName`, `passWord`, `nickName` FROM `users` WHERE name=#{userName}
 	</select>
+
 </mapper> 
